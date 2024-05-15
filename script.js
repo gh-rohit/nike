@@ -12,7 +12,8 @@ document.querySelector("h1").innerHTML = clutter
 }
 h1Text()
 
-var since=document.querySelector('.since p')
+function sincePara(){
+    var since=document.querySelector('.since p')
 var sinceText = document.querySelector(".since p").textContent
 var splittext = sinceText.split("")
 console.log(splittext)
@@ -22,6 +23,8 @@ splittext.forEach(function(dets){
   
 })
 document.querySelector(".since p").innerHTML = clutter2;
+}
+sincePara()
 
 
  var tl=gsap.timeline()
@@ -30,27 +33,25 @@ tl.from("h1 span",{
     stagger:0.3,
      y:40,
     duration:1,
-    delay:0.3,
-   
+    delay:0.3, 
 })
 tl.from(".since p span",{
      opacity: 0.2,
-    stagger: 0.3,
-    duration: 1,
-    
-    
+    stagger: 0.2,
+    duration: 0.1
 
 })
 tl.from(".text img",{
      opacity:0,
-     y:40,
+    //  y:40,
+    scale:0,
      duration:1,
      
 })
 tl.to(".line",{
     width:"60%",
     opacity:0.6,
-    duration:2,
+    duration:1,
 })
 
 tl.to(".open",{
