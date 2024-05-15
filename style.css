@@ -1,0 +1,65 @@
+ @font-face {
+  font-family: futura;
+  src: url(./Nike-Futura.ttf);
+  font-weight: 100;
+ }
+ @font-face {
+  font-family: hello;
+  src: url(./HelveticaNowTextMedium.ttf);
+ }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,body {
+height: 100%;
+width:100%;
+}
+.open{
+    min-height: 100vh;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.text{
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+}
+.text h1{
+  font-size:4.5vw;
+  color: white;
+  font-family: Hello;
+    font-style: italic;
+    letter-spacing: 0.5vw;
+
+}
+.text img{
+  height: 10vw;
+  
+}
+.since p{
+  font-size: 1.5vw;
+  color: white;
+ margin-right: 2vw;
+ font-family: Arial, Helvetica, sans-serif;
+ font-weight: 100;
+ opacity: 0.5;
+ letter-spacing: 0.5vw;
+}
+.line{
+  position: absolute;
+  top: 65%;
+  margin-top: 2vw;
+  width: 0%;
+  height: 0.1px;
+  opacity: 0.5;
+  background-color: rgb(255, 255, 255);
+}
+
