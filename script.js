@@ -55,7 +55,7 @@ tl.to(".line",{
 })
 
 tl.to(".open",{
-    y:-600,
+    y:"-100%",
     duration:1,
     delay:0.2
 })
