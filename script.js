@@ -47,12 +47,12 @@ tl.from(".text img",{
     scale:0,
      duration:1,
      
-})
+},"a")
 tl.to(".line",{
     width:"60%",
     opacity:0.6,
     duration:1,
-})
+},"a")
 
 tl.to(".open",{
     y:"-100%",
