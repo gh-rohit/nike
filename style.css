@@ -18,9 +18,7 @@ html,body {
 height: 100%;
 width:100%;
 }
-#main{
 
-}
 .open{
     min-height: 100vh;
     width: 100%;
@@ -133,6 +131,7 @@ justify-content: flex-end;
   height: 80vh;
   position: relative;
   overflow: hidden;
+
 }
 .box img{
   height: 100%;
@@ -141,9 +140,7 @@ justify-content: flex-end;
   border-radius: 5px;
   position: absolute;
 }
-.box-text h1{
 
-}
 .box-text{
  opacity: 1;
  font-family: hello;
@@ -153,6 +150,63 @@ justify-content: flex-end;
   min-height: 100vh;
   width: 100%;
   background-color: rgb(0, 0, 0);
+  display: flex;
 
+}
+.p3-box-1{
+  width: 50%;
+  height: 100vh;
+  /* background-color: lightcoral; */
+  padding: 5vw 2vw;
+}
+.p3-box-1 h1{
+  font-family: hello;
+  color: white;
+  margin-bottom: 5vh;
+  font-size: 5vw;
+}
+.p3-box-1 h3{
+  color: white;
+  font-family: hello;
+}
+.p3-box-1 p{
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  margin-top: 8vh;
+  width: 76%;
+letter-spacing: 1px;
+line-height: 4vh;
+margin-left: 4vw;
+opacity: 0.8;
+
+}
+.p3-box-1 button{
+  padding: 2vh 4vh;
+  border: none;
+  border-radius: 5vh;
+  margin-top: 10vh;
+  margin-left: 20vh;
+font-weight: 900;
+opacity: 0.9;
+
+}
+
+.p3-box-2{
+  width: 50%;
+  height: 100vh;
+  overflow: hidden;
+  
+
+}
+.p3-box-2 img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+}
+#page4{
+  min-height: 100vh;
+  width: 100%;
+  background-color: black;
 }
 

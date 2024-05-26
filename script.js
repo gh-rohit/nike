@@ -130,7 +130,3 @@ tl.to(".open",{
   
   }
   boxAnimation()
-  
-  
-  
-  
