@@ -8,6 +8,21 @@
   src: url(./HelveticaNowTextMedium.ttf);
  }
 
+@font-face {
+  font-family:text-style ;
+  src: url(./SaolDisplay-LightItalic.woff2);
+  font-weight: 100;
+ }
+ @font-face {
+  font-family:text-light ;
+  src: url(./clarkson-300.woff2);
+ }
+ @font-face {
+  font-family:text-heading;
+  src: url(./clarkson-500.woff2);
+ }
+
+
 * {
   margin: 0;
   padding: 0;
@@ -28,6 +43,7 @@ width:100%;
     align-items: center;
     justify-content: center;
     position: absolute;
+    z-index: 4;
 }
 
 .brand-text{
@@ -65,9 +81,134 @@ width:100%;
   opacity: 0.5;
   background-color: rgb(255, 255, 255);
 }
+
+
+  #home{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+z-index: 3;
+
+  }
+  
+  .swiper {
+    width: 100%;
+    height: 110vh;
+    background-color: black;
+      padding-top: 3.6rem;
+  }
+  .swiper-slide {
+    position: relative;
+    text-align: center;
+    font-size: 18px;
+    background: #af5353;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .home-text{
+    padding-top: 5rem;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color: #ffffff;
+    text-transform: uppercase;
+  }
+  .home-left{
+    height: 100%;
+    width: 50vw;
+    padding: 5em 3rem;
+    display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: top;
+  }
+  .home-left h3{
+    font-family:text-light ;
+    margin-bottom: 1.8rem;
+    font-weight: 600;
+  }
+  .home-left h1{
+  font-size: 7vw;
+    font-family:text-heading ;
+    line-height: 0.9;
+  }
+  .swiper-slide img {
+
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+.swiper-button-next:after, .swiper-button-prev:after {
+ color:white;
+}
+.swiper-pagination span{
+  background-color: aliceblue;
+}
+  
+  .autoplay-progress {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    z-index: 10;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color:white;
+  }
+  .autoplay-progress svg {
+    --progress: 0;
+    position: absolute;
+    left: 0;
+    top: 0px;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    stroke-width: 4px;
+    stroke: white;
+    fill: none;
+    stroke-dashoffset: calc(125.6px * (1 - var(--progress)));
+    stroke-dasharray: 125.6;
+    transform: rotate(-90deg);
+  }
+  #nav{
+    height: 60px;
+    width: 100%;
+    padding: 1px 150px ;
+    position: absolute;
+    z-index: 7;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+  }
+  #nav h1{
+    font-size: 30px;
+    font-weight: bolder;
+  text-transform: uppercase;
+  color: #000000;
+  font-family: text-style;
+  }
+  #home-white{
+  background-color: #eee;
+  width: 100vw;
+  height: 0.5vh;
+  }
+
+
+
+
+
+
 #page1{
   height: 100vh;
   width: 100%;
+  overflow: hidden;
 }
 #page1 img{
   width: 100%;
