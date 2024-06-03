@@ -32,7 +32,9 @@
 html,body {
 height: 100%;
 width:100%;
+
 }
+
 
 .open{
     min-height: 100vh;
@@ -43,7 +45,7 @@ width:100%;
     align-items: center;
     justify-content: center;
     position: absolute;
-    z-index: 4;
+    z-index: 999;
 }
 
 .brand-text{
@@ -180,8 +182,10 @@ z-index: 3;
     height: 60px;
     width: 100%;
     padding: 1px 150px ;
-    position: absolute;
-    z-index: 7;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+    z-index:-1;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -199,6 +203,11 @@ z-index: 3;
   width: 100vw;
   height: 0.5vh;
   }
+
+
+
+
+
 
 
 
