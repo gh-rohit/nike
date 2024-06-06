@@ -1,6 +1,8 @@
+
+function swiperSart(){
 const progressCircle = document.querySelector(".autoplay-progress svg");
 const progressContent = document.querySelector(".autoplay-progress span");
-var swiper = new Swiper(".mySwiper", {
+var swiper = new Swiper("#home .mySwiper", {
   loop: true,
  
   navigation: {
@@ -22,6 +24,34 @@ var swiper = new Swiper(".mySwiper", {
     }
   }
 });
+}
+swiperSart();
+
+function navMove(){
+var nav =document.querySelector("#nav")
+var mian =document.querySelector("#mian")
+main.addEventListener("wheel",function(dets){
+console.log(dets.wheelDeltaY)
+if(dets.deltaY>0){
+    gsap.to(nav,{
+        y:"-100%",
+        duration:1,
+    })
+}
+else{
+    gsap.to(nav,{
+        y:"0%",
+        duration:1.3,
+    })
+}
+}, { passive: true })
+
+}
+navMove();
+
+
+
+
 
 
 function locoMotive(){
@@ -115,9 +145,22 @@ tl.to(".line",{
 tl.to(".open",{
     y:"-100%",
     duration:1,
-    delay:0.2, 
+    delay:0.2,
+    onComplete: function() {
+      // This function will be called when the animation completes
+      var nav= document.querySelector("#nav")
+      nav.style.zIndex="6"
+
+     gsap.from("#nav",{
+      y:"-100%",
+      duration:0.4,
+      // ease: "power.inOut",
+     })
+   
+    } 
 })
   
+
   function boxAnimation(){
     var overlays = document.querySelectorAll(".overlay");
   
@@ -155,3 +198,90 @@ tl.to(".open",{
   
   }
   boxAnimation()
+
+
+
+
+  //puse -opening-scroll
+  function locoMotive() {
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Initialize Locomotive Scroll
+    const locoScroll = new LocomotiveScroll({
+        el: document.querySelector("#main"),
+        smooth: true
+    });
+
+    // Sync ScrollTrigger with Locomotive Scroll
+    locoScroll.on("scroll", ScrollTrigger.update);
+
+    // Configure ScrollTrigger to work with Locomotive Scroll
+    ScrollTrigger.scrollerProxy("#main", {
+        scrollTop(value) {
+            return arguments.length ? locoScroll.scrollTo(value, { duration: 0, disableLerp: true }) : locoScroll.scroll.instance.scroll.y;
+        },
+        getBoundingClientRect() {
+            return { top: 0, left: 0, width: window.innerWidth, height: window.innerHeight };
+        },
+        pinType: document.querySelector("#main").style.transform ? "transform" : "fixed"
+    });
+
+    // Refresh ScrollTrigger and Locomotive Scroll on window updates
+    ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
+    ScrollTrigger.defaults({ scroller: "#main" });
+
+    // Refresh ScrollTrigger and Locomotive Scroll after setup
+    ScrollTrigger.refresh();
+
+    // Function to disable scrolling
+    function disableScroll() {
+        locoScroll.stop();
+        console.log("Scroll disabled");
+    }
+
+    // Function to enable scrolling
+    function enableScroll() {
+        locoScroll.start();
+        console.log("Scroll enabled");
+    }
+
+    // GSAP animation using ScrollTrigger
+    gsap.to(".open", {
+        duration:5,
+            onStart: disableScroll,
+            onComplete: enableScroll,
+        
+    });
+  }
+
+
+  function productswiper(){
+  const progressCircle = document.querySelector("#page5 .autoplay-progress svg");
+  const progressContent = document.querySelector("#page5 .autoplay-progress span");
+  
+  var swiper = new Swiper("#page5 .mySwiper", {
+      slidesPerView: 4,
+      loop:true,
+      grid: {
+        rows: 2,
+      },
+      spaceBetween: 20,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: false
+      },
+      on: {
+        autoplayTimeLeft(s, time, progress) {
+          progressCircle.style.setProperty("--progress", 1 - progress);
+          progressContent.textContent = `${Math.ceil(time / 1000)}s`;
+        }
+      }
+    });
+  }
+
+  productswiper()
+    

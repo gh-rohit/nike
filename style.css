@@ -32,7 +32,9 @@
 html,body {
 height: 100%;
 width:100%;
+
 }
+
 
 .open{
     min-height: 100vh;
@@ -43,7 +45,7 @@ width:100%;
     align-items: center;
     justify-content: center;
     position: absolute;
-    z-index: 4;
+    z-index: 999;
 }
 
 .brand-text{
@@ -150,7 +152,7 @@ z-index: 3;
   background-color: aliceblue;
 }
   
-  .autoplay-progress {
+#home .autoplay-progress {
     position: absolute;
     right: 16px;
     bottom: 16px;
@@ -163,7 +165,7 @@ z-index: 3;
     font-weight: bold;
     color:white;
   }
-  .autoplay-progress svg {
+  #home .autoplay-progress svg {
     --progress: 0;
     position: absolute;
     left: 0;
@@ -182,8 +184,10 @@ z-index: 3;
     height: 60px;
     width: 100%;
     padding: 1px 150px ;
-    position: absolute;
-    z-index: 7;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+    z-index:-1;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -201,6 +205,11 @@ z-index: 3;
   width: 100vw;
   height: 0.5vh;
   }
+
+
+
+
+
 
 
 
@@ -348,9 +357,122 @@ opacity: 0.9;
   object-fit: cover;
 
 }
-#page4{
-  min-height: 100vh;
-  width: 100%;
-  background-color: black;
-}
+
+
+
+        #page5{
+          width: 100%;
+        }
+        #page5-text{
+          width: 100%;
+          display: flex;
+         justify-content: center;
+         padding: 7vw;
+         padding-top: 7vw;
+        
+        }
+        #page5-text h1{
+          color: #000000;
+          font-size: 3vw;
+          font-weight: bold;
+          word-spacing: 0.1vw;
+          letter-spacing: -0.12vw;
+          text-transform: uppercase;
+          border-bottom: 1px solid black;
+        }
+
+        #page5 .swiper {
+          width: 100;
+          height: 120vh;
+        background-color: #eee;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      
+        #page5 .swiper-slide {
+          text-align: center;
+          font-size: 18px;
+          background: #fff;
+          height: calc((100% - 30px) / 2) !important;
+        }
+        #page5 .swiper-img{
+          width: 100%;
+          height: 76%;
+        }
+        #page5 .swiper-img img{
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+        #page5 .swiper-text{
+          width: 100%;
+          height: 24%;
+          position: relative;
+          text-align: left;
+          padding: 1vw 1.5vw ;
+        }
+
+        #page5 .swiper-text h1{
+         color: #000000;
+          font-size: 2vw;
+          word-spacing: 0.1vw;
+          letter-spacing: -0.12vw;
+        }
+        #page5 .swiper-text-in{
+        display: flex;
+        justify-content: space-between;
+        }
+        #page5 .swiper-text h3{
+          color: #000000;
+          font-size: 1.2vw;
+          font-weight: lighter;
+        }   
+         
+        #page5 .swiper-icon{
+          width: 2.1rem;
+          height: 2.1rem;
+          background-color: #cbc8c8;
+          position: absolute;
+          top: 0%;
+          left: 82%;
+          transform: translate(-50%,-50%);
+          border-radius: 50%;
+          padding: 0.5rem;
+        }
+        #page5 .swiper-icon i{
+          width: 100%;
+          height: 100%;
+        }
+
+
+        #page5 .autoplay-progress {
+          position: absolute;
+          right: 16px;
+          bottom: 16px;
+          z-index: 10;
+          width: 48px;
+          height: 48px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-weight: bold;
+          color: var(--swiper-theme-color);
+        }
+    
+        #page5 .autoplay-progress svg {
+          --progress: 0;
+          position: absolute;
+          left: 0;
+          top: 0px;
+          z-index: 10;
+          width: 100%;
+          height: 100%;
+          stroke-width: 4px;
+          stroke: var(--swiper-theme-color);
+          fill: none;
+          stroke-dashoffset: calc(125.6px * (1 - var(--progress)));
+          stroke-dasharray: 125.6;
+          transform: rotate(-90deg);
+        }
+
 
