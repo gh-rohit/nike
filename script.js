@@ -1,16 +1,16 @@
 
 function swiperSart(){
-const progressCircle = document.querySelector(".autoplay-progress svg");
-const progressContent = document.querySelector(".autoplay-progress span");
+const progressCircle = document.querySelector("#home .autoplay-progress svg");
+const progressContent = document.querySelector("#home .autoplay-progress span");
 var swiper = new Swiper("#home .mySwiper", {
   loop: true,
  
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: "#home .swiper-button-next",
+    prevEl: "#home .swiper-button-prev",
   },
   pagination: {
-    el: ".swiper-pagination",
+    el: "#home .swiper-pagination",
     clickable: true
   },
   autoplay: {
@@ -175,7 +175,7 @@ tl.to(".open",{
           duration: 0.8
       });
       gsap.to(elem.querySelectorAll(".box-text p"), {
-        opacity: 1,
+        opacity: 0.5,
         duration: 2
       });
     });
@@ -185,7 +185,7 @@ tl.to(".open",{
           backgroundColor: "rgba(0, 0, 0, 0)" 
       });
       gsap.to(elem.querySelector(".box-text"), {
-          opacity: 0,
+          // opacity: 0,
           y: 0,
           duration: 0.8
       });
@@ -267,7 +267,7 @@ tl.to(".open",{
       },
       spaceBetween: 20,
       pagination: {
-        el: ".swiper-pagination",
+        el: "#page5 .swiper-pagination",
         clickable: true,
       },
       autoplay: {
