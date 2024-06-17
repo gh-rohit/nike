@@ -31,7 +31,7 @@ function navMove(){
 var nav =document.querySelector("#nav")
 var mian =document.querySelector("#mian")
 main.addEventListener("wheel",function(dets){
-console.log(dets.wheelDeltaY)
+
 if(dets.deltaY>0){
     gsap.to(nav,{
         y:"-100%",
@@ -236,13 +236,13 @@ tl.to(".open",{
     // Function to disable scrolling
     function disableScroll() {
         locoScroll.stop();
-        console.log("Scroll disabled");
+ 
     }
 
     // Function to enable scrolling
     function enableScroll() {
         locoScroll.start();
-        console.log("Scroll enabled");
+      
     }
 
     // GSAP animation using ScrollTrigger
@@ -285,3 +285,42 @@ tl.to(".open",{
 
   productswiper()
     
+
+
+
+  // var move2 = gsap.timeline({
+  //   scrollTrigger:{
+  //     scroller:'',
+  //     trigger:'.shoe-container',
+  //     start:'top 50%',
+  //     markers:true,
+  //     scrub:2
+  //   }
+  // })
+  // move2
+  // .to(".shoe-container", {
+  //   x: -2000,
+  // });
+  // move2
+    
+  // .to('#img1',{
+  //   x: 230,
+  // },'elem')
+  // .to('#img2',{
+  //   x: 230,
+  // },'elem')
+  // .to('#img3',{
+  //   x: 230,
+  // },'elem')
+  // .to('#img4',{
+  //   x: 230,
+  // },'elem')
+  // .to('#img5',{
+  //   x: 230,
+  // },'elem')
+  // .to('#img6',{
+  //   x: 230,
+  // },'elem')
+  // .to('#img7',{
+  //   x: 230,
+  // },'elem')
