@@ -347,16 +347,87 @@ productsClass()
 
 
 
-// gsap.to("#page2-5",{
-//   backgroundColor:"blue",
-//   scrollTrigger:{
-//     trigger:"#page2-5",
-//     scroller:"#main",
-// markers:true,
-// start:"top 0",
-// end:"bottom 0",
-// scrub:true,
 
-// },
 
-// })
+
+function featureSwiper(){
+  var swiper = new Swiper(" #page7 .mySwiper", {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    pagination: {
+      el: " #page7 .swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+          nextEl: "#page7 .swiper-button-next",
+          prevEl: "#page7 .swiper-button-prev",
+        },
+    speed: 3000,
+    parallax: true,
+    autoplay: {
+      delay: 50,
+      disableOnInteraction: false,
+    },
+    loop: true,
+    breakpoints: {
+      "@0.00": {
+        slidesPerView: 1,
+        spaceBetween: 10,
+      },
+      "@0.75": {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      "@1.00": {
+        slidesPerView: 3,
+        spaceBetween: 40,
+      },
+      "@1.50": {
+        slidesPerView: 3,
+        spaceBetween: 50,
+      },
+    },
+  
+  });
+  
+  }
+  featureSwiper();
+
+
+  function reviewSwiper(){
+    var swiper = new Swiper(" #page8 .mySwiper", {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      pagination: {
+        el: " #page8 .swiper-pagination",
+        clickable: true,
+      },
+    
+      navigation: {
+            nextEl: "#page8 .swiper-button-next",
+            prevEl: "#page8 .swiper-button-prev",
+          },
+      loop: true,
+      breakpoints: {
+        "@0.00": {
+          slidesPerView: 1,
+          spaceBetween: 10,
+        },
+        "@0.75": {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        "@1.00": {
+          slidesPerView: 3,
+          spaceBetween: 40,
+        },
+        "@1.50": {
+          slidesPerView: 3,
+          spaceBetween: 50,
+        },
+      },
+    
+    });
+    
+    }
+    reviewSwiper();
