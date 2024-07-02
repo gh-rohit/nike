@@ -768,6 +768,7 @@ opacity: 0.9;
           justify-content: center;
           align-items: center;
           overflow: hidden;
+          position: relative;
         }
       #page6 .parallax-bg {
           position: absolute;
@@ -814,6 +815,31 @@ opacity: 0.9;
           stroke-dasharray: 125.6;
           transform: rotate(-90deg);
         }
+
+        #page6 .swiper-slide .page6-swiper-box {
+          position: absolute;
+          color: #000000;
+          background-color: rgba(255, 255, 255, 0.701);
+          backdrop-filter:blur(12px);
+          width: 100%;
+          height: 7%;
+          bottom: 0%;
+          padding: 1.3vh  2vw;
+        
+            }
+            #page6 .swiper-slide .page6-swiper-box h1{
+          color: #000000;
+              font-size: 1.5vw;
+              font-weight: 700;
+              text-align: center;
+                }
+            #page6 .swiper-slide img {
+              width: 100%;
+              height: 100%;
+            }
+
+
+
 
 
 
@@ -892,6 +918,7 @@ margin-top:3vh;
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  position: relative;
 }
 #page7 .parallax-bg {
   position: absolute;
@@ -937,7 +964,27 @@ margin-top:3vh;
   stroke-dasharray: 125.6;
   transform: rotate(-90deg);
 }
+#page7 .swiper-slide .page7-swiper-box {
+  position: absolute;
+  color: #000000;
+  background-color: rgba(255, 255, 255, 0.701);
+  backdrop-filter:blur(12px);
+  width: 100%;
+  height: 7%;
+  bottom: 0%;
+  padding: 0.1vh  2vw;
 
+    }
+    #page7 .swiper-slide .page7-swiper-box h1{
+  color: #000000;
+      font-size: 1.5vw;
+      font-weight: 700;
+      text-align: center;
+        }
+    #page6 .swiper-slide img {
+      width: 100%;
+      height: 100%;
+    }
 
 
 

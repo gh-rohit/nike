@@ -344,7 +344,7 @@ function productsClass(){
     parallax: true,
     autoplay: {
       delay: 1150,
-      disableOnInteraction: true,
+      disableOnInteraction: false,
     },
     on: {
       autoplayTimeLeft(s, time, progress) {
