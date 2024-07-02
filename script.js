@@ -13,10 +13,10 @@ var swiper = new Swiper("#home .mySwiper", {
     el: "#home .swiper-pagination",
     clickable: true
   },
-  autoplay: {
-    delay: 3000,
-    disableOnInteraction: false
-  },
+  // autoplay: {
+  //   delay: 3000,
+  //   disableOnInteraction: false
+  // },
   on: {
     autoplayTimeLeft(s, time, progress) {
       progressCircle.style.setProperty("--progress", 1 - progress);
@@ -290,7 +290,37 @@ tl.to(".open",{
           progressCircle.style.setProperty("--progress", 1 - progress);
           progressContent.textContent = `${Math.ceil(time / 1000)}s`;
         }
-      }
+      },
+      breakpoints: {
+        "@0.00": {
+          slidesPerView: 1,
+          spaceBetween: 10,
+             grid: {
+        rows: 2,
+      },
+        },
+        "@0.75": {
+          slidesPerView: 1,
+          spaceBetween: 2,
+          grid: {
+            rows: 2,
+          },
+        },
+        "@1.00": {
+          slidesPerView: 3,
+          spaceBetween: 10,
+          grid: {
+            rows: 2,
+          },
+        },
+        "@1.50": {
+          slidesPerView: 3,
+          spaceBetween: 10,
+          grid: {
+            rows: 2,
+          },
+        },
+      },
     });
   }
 
@@ -300,6 +330,8 @@ tl.to(".open",{
 
 
 function productsClass(){
+  const progressCircle = document.querySelector("#page6 .autoplay-progress svg");
+  const progressContent = document.querySelector("#page6 .autoplay-progress span");
 
   var swiper = new Swiper("#page6 .mySwiper", {
     slidesPerView: 1,
@@ -311,8 +343,14 @@ function productsClass(){
     speed: 3000,
     parallax: true,
     autoplay: {
-      delay: 50,
-      disableOnInteraction: false,
+      delay: 1150,
+      disableOnInteraction: true,
+    },
+    on: {
+      autoplayTimeLeft(s, time, progress) {
+        progressCircle.style.setProperty("--progress", 1 - progress);
+        progressContent.textContent = `${Math.ceil(time / 1000)}s`;
+      }
     },
     loop: true,
     breakpoints: {
@@ -351,12 +389,20 @@ productsClass()
 
 
 function featureSwiper(){
+  const progressCircle = document.querySelector("#page7 .autoplay-progress svg");
+  const progressContent = document.querySelector("#page7 .autoplay-progress span");
   var swiper = new Swiper(" #page7 .mySwiper", {
     slidesPerView: 1,
     spaceBetween: 10,
     pagination: {
       el: " #page7 .swiper-pagination",
       clickable: true,
+    },
+    on: {
+      autoplayTimeLeft(s, time, progress) {
+        progressCircle.style.setProperty("--progress", 1 - progress);
+        progressContent.textContent = `${Math.ceil(time / 1000)}s`;
+      }
     },
     navigation: {
           nextEl: "#page7 .swiper-button-next",
@@ -365,7 +411,7 @@ function featureSwiper(){
     speed: 3000,
     parallax: true,
     autoplay: {
-      delay: 50,
+      delay: 1150,
       disableOnInteraction: false,
     },
     loop: true,
@@ -431,3 +477,104 @@ function featureSwiper(){
     
     }
     reviewSwiper();
+
+
+
+
+// function navOpen(){
+
+//    var navHead = document.querySelectorAll("#navLeft h1")
+//    var navLeave = document.querySelectorAll("#nav-section .nav-contain")
+  
+// navHead.forEach(function(elem,index){
+//   elem.addEventListener("mouseenter",function(){
+
+//       gsap.to(".nav-contain",{
+//         // display:"none",
+//          zIndex:0,
+//         onComplete:function(){
+//           gsap.to("#nav-section",{
+//             height:"100vh",
+//             display: "block",
+//             duration:0.2,
+//             opacity: 1,
+//             onComplete:function(){
+//               let boxs="#nav-texts-"+(index+1)
+//               gsap.to(boxs,{
+//                 //  display:"flex",
+//                 zIndex:2,
+//                })
+//             },
+//           })
+//         },
+//       })
+
+//  })
+
+
+// })
+
+// navLeave.forEach(function(elem,index){
+
+//   elem.addEventListener("mouseleave",function(){
+//     gsap.to("#nav-section",{
+//       display: "none",
+//       duration:0.5,
+//     })
+
+//     gsap.to("#nav-section",{
+//       height:"0vh",
+//       opacity: 0,
+//       duration:0.1,
+//     })
+
+//   gsap.to(elem,{
+//     zIndex:0,
+//   })  
+
+    
+//  })
+
+// })   
+// }
+
+// navOpen()
+
+
+
+
+function navOpenSmall(){
+
+var navHead = document.querySelector("#nav #navRight .ri-align-justify") 
+navHead.addEventListener("mouseenter",function(){
+console.log(navHead)
+      gsap.to("#nav-section",{
+        height:"100vh",
+        display: "block",
+        duration:0.2,
+        opacity: 1,
+      })
+      gsap.to(".nav-contain",{
+   display:"none",
+      })
+
+    })
+
+    var navl = document.querySelector(".smallnav")
+    navl.addEventListener("mouseleave",function(){
+
+    gsap.to("#nav-section",{
+      display: "none",
+      duration:0.5,
+    })
+
+    gsap.to("#nav-section",{
+      height:"0vh",
+      opacity: 0,
+      duration:0.1,
+    })
+
+  })
+
+}
+navOpenSmall()
